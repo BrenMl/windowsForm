@@ -1,0 +1,9 @@
+C:\ProyectoGordos\Ferrero\AccesoDatosCS\bin\Debug\AccesoDatosCS.dll
+C:\ProyectoGordos\Ferrero\AccesoDatosCS\bin\Debug\AccesoDatosCS.pdb
+C:\ProyectoGordos\Ferrero\AccesoDatosCS\bin\Debug\EntidadNegociosCS.dll
+C:\ProyectoGordos\Ferrero\AccesoDatosCS\bin\Debug\EntidadNegociosCS.pdb
+C:\ProyectoGordos\Ferrero\AccesoDatosCS\obj\Debug\AccesoDatosCS.csprojAssemblyReference.cache
+C:\ProyectoGordos\Ferrero\AccesoDatosCS\obj\Debug\AccesoDatosCS.csproj.CoreCompileInputs.cache
+C:\ProyectoGordos\Ferrero\AccesoDatosCS\obj\Debug\AccesoDatosCS.csproj.CopyComplete
+C:\ProyectoGordos\Ferrero\AccesoDatosCS\obj\Debug\AccesoDatosCS.dll
+C:\ProyectoGordos\Ferrero\AccesoDatosCS\obj\Debug\AccesoDatosCS.pdb

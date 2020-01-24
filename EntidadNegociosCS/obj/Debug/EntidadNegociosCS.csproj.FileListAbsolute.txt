@@ -1,0 +1,6 @@
+C:\ProyectoGordos\Ferrero\EntidadNegociosCS\bin\Debug\EntidadNegociosCS.dll
+C:\ProyectoGordos\Ferrero\EntidadNegociosCS\bin\Debug\EntidadNegociosCS.pdb
+C:\ProyectoGordos\Ferrero\EntidadNegociosCS\obj\Debug\EntidadNegociosCS.csprojAssemblyReference.cache
+C:\ProyectoGordos\Ferrero\EntidadNegociosCS\obj\Debug\EntidadNegociosCS.csproj.CoreCompileInputs.cache
+C:\ProyectoGordos\Ferrero\EntidadNegociosCS\obj\Debug\EntidadNegociosCS.dll
+C:\ProyectoGordos\Ferrero\EntidadNegociosCS\obj\Debug\EntidadNegociosCS.pdb

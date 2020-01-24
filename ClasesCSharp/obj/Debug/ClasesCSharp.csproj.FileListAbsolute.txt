@@ -1,0 +1,6 @@
+C:\ProyectoGordos\Ferrero\ClasesCSharp\bin\Debug\ClasesCSharp.dll
+C:\ProyectoGordos\Ferrero\ClasesCSharp\bin\Debug\ClasesCSharp.pdb
+C:\ProyectoGordos\Ferrero\ClasesCSharp\obj\Debug\ClasesCSharp.csprojAssemblyReference.cache
+C:\ProyectoGordos\Ferrero\ClasesCSharp\obj\Debug\ClasesCSharp.csproj.CoreCompileInputs.cache
+C:\ProyectoGordos\Ferrero\ClasesCSharp\obj\Debug\ClasesCSharp.dll
+C:\ProyectoGordos\Ferrero\ClasesCSharp\obj\Debug\ClasesCSharp.pdb

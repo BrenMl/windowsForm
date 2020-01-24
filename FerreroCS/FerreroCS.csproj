@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA462194-B08B-4BFD-8B55-1AB5826F4FED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FerreroCS</RootNamespace>
+    <AssemblyName>FerreroCS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FerreroCS.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>Librerias\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>Librerias\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="ClasesCSharp">
+      <HintPath>..\ClasesCSharp\obj\Debug\ClasesCSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.9.2.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Windows.1.9.2\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.9.2.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Windows.1.9.2\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=1.9.2.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Windows.1.9.2\lib\net40\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.110.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.110.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.110.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CATALOGOS\FrmConsultaDiaFestivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmConsultaDiaFestivo.Designer.cs">
+      <DependentUpon>FrmConsultaDiaFestivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\FrmConsultaEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS\FrmConsultaEntradas.Designer.cs">
+      <DependentUpon>FrmConsultaEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmMapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmMapa.Designer.cs">
+      <DependentUpon>FrmMapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmCapturarFoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmCapturarFoto.Designer.cs">
+      <DependentUpon>FrmCapturarFoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmConsultaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmConsultaProductos.Designer.cs">
+      <DependentUpon>FrmConsultaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmDiasFestivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmDiasFestivos.Designer.cs">
+      <DependentUpon>FrmDiasFestivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmEditorImagenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmEditorImagenes.Designer.cs">
+      <DependentUpon>FrmEditorImagenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmConsultaClientes.Designer.cs">
+      <DependentUpon>FrmConsultaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmConsultaRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmConsultaRuta.Designer.cs">
+      <DependentUpon>FrmConsultaRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmConsultaEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmConsultaEmpleados.Designer.cs">
+      <DependentUpon>FrmConsultaEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmProductos.Designer.cs">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\FrmRutas.Designer.cs">
+      <DependentUpon>FrmRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGOS\MDICatalogos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGOS\MDICatalogos.Designer.cs">
+      <DependentUpon>MDICatalogos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscadorGenerico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscadorGenerico.Designer.cs">
+      <DependentUpon>FrmBuscadorGenerico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCat.Designer.cs">
+      <DependentUpon>FrmCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMA\frmCambioPsw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISTEMA\frmCambioPsw.Designer.cs">
+      <DependentUpon>frmCambioPsw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SISTEMA\frmCargando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISTEMA\frmCargando.Designer.cs">
+      <DependentUpon>frmCargando.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMA\FrmFiltrarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISTEMA\FrmFiltrarUsuarios.Designer.cs">
+      <DependentUpon>FrmFiltrarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMA\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISTEMA\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMA\FrmMonitorSesiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISTEMA\FrmMonitorSesiones.Designer.cs">
+      <DependentUpon>FrmMonitorSesiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMA\FrmSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISTEMA\FrmSistema.Designer.cs">
+      <DependentUpon>FrmSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\FrmConsultarSalidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS\FrmConsultarSalidas.Designer.cs">
+      <DependentUpon>FrmConsultarSalidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\FrmEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS\FrmEntradas.Designer.cs">
+      <DependentUpon>FrmEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\FrmSalidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS\FrmSalidas.Designer.cs">
+      <DependentUpon>FrmSalidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\MDIVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS\MDIVentas.Designer.cs">
+      <DependentUpon>MDIVentas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CATALOGOS\FrmConsultaDiaFestivo.resx">
+      <DependentUpon>FrmConsultaDiaFestivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\FrmConsultaEntradas.resx">
+      <DependentUpon>FrmConsultaEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\FrmMapa.resx">
+      <DependentUpon>FrmMapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\FrmCapturarFoto.resx">
+      <DependentUpon>FrmCapturarFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\FrmConsultaProductos.resx">
+      <DependentUpon>FrmConsultaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\FrmDiasFestivos.resx">
+      <DependentUpon>FrmDiasFestivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\FrmEditorImagenes.resx">
+      <DependentUpon>FrmEditorImagenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\FrmConsultaEmpleados.resx">
+      <DependentUpon>FrmConsultaEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\FrmConsultaClientes.resx">
+      <DependentUpon>FrmConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\FrmConsultaRuta.resx">
+      <DependentUpon>FrmConsultaRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\FrmProductos.resx">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\FrmRutas.resx">
+      <DependentUpon>FrmRutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGOS\MDICatalogos.resx">
+      <DependentUpon>MDICatalogos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscadorGenerico.resx">
+      <DependentUpon>FrmBuscadorGenerico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCat.resx">
+      <DependentUpon>FrmCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SISTEMA\frmCambioPsw.resx">
+      <DependentUpon>frmCambioPsw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SISTEMA\frmCargando.resx">
+      <DependentUpon>frmCargando.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SISTEMA\FrmFiltrarUsuarios.resx">
+      <DependentUpon>FrmFiltrarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SISTEMA\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SISTEMA\FrmMonitorSesiones.resx">
+      <DependentUpon>FrmMonitorSesiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SISTEMA\FrmSistema.resx">
+      <DependentUpon>FrmSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\FrmEntradas.resx">
+      <DependentUpon>FrmEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\FrmSalidas.resx">
+      <DependentUpon>FrmSalidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\MDIVentas.resx">
+      <DependentUpon>MDIVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClasesCS\ClasesCS.csproj">
+      <Project>{fc3d54c8-6a61-40c9-a3a8-58095e420170}</Project>
+      <Name>ClasesCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntidadNegociosCS\EntidadNegociosCS.csproj">
+      <Project>{6045aa6a-3cc2-4121-9a13-db689d137d84}</Project>
+      <Name>EntidadNegociosCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaNegociosCS\LogicaNegociosCS.csproj">
+      <Project>{e475e64f-5c44-4612-a83a-563aeb5c6856}</Project>
+      <Name>LogicaNegociosCS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-simbolo-de-esquema-fino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloquear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-masculino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-masculino %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloquear %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carnet-de-identidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Catalog_36769.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orig_551055.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4f93b794264a28106e3ff6820963560d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\akhpolcn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xvgqbrca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qmecjdgt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-id-icon_34334.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon-icons.com_66546.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1455554996_users-11_icon-icons.com_53275.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+    <None Include="Resources\anadir.png" />
+    <None Include="Resources\edit-validated_40458.png" />
+    <None Include="Resources\delete-file_40456.png" />
+    <None Include="Resources\new-file_40454.png" />
+    <None Include="Resources\file-complete_40445.png" />
+    <None Include="Resources\mapa.png" />
+    <None Include="Resources\buscarColonia.png" />
+    <None Include="Resources\Save-as_37111.png" />
+    <Content Include="Librerias\AForge.Video.DirectShow.dll" />
+    <Content Include="Librerias\AForge.Video.dll" />
+    <None Include="Resources\17_104874.png" />
+    <None Include="Resources\refrescar %282%29.png" />
+    <None Include="Resources\refrescar %283%29.png" />
+    <None Include="Resources\ferrero-rocher-logo.jpg" />
+    <None Include="Resources\001-guardar.png" />
+    <None Include="Resources\002-disco-flexible.png" />
+    <None Include="Resources\003-camara-de-fotos.png" />
+    <None Include="Resources\LogoMDI.png" />
+    <None Include="Resources\iniciar.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\play1.png" />
+    <None Include="Resources\LogoFerrero.png" />
+    <None Include="Resources\fondologin.jpg" />
+    <None Include="Resources\001-login-1.png" />
+    <None Include="Resources\002-login.png" />
+    <None Include="Resources\fondologin2.jpg" />
+    <None Include="Resources\login-user.png" />
+    <None Include="Resources\afectarInventario.png" />
+    <None Include="Resources\carro.png" />
+    <None Include="Resources\carro-de-entregas %281%29.png" />
+    <None Include="Resources\Empleado.png" />
+    <None Include="Resources\tienda-de-comestibles.png" />
+    <None Include="Resources\carpeta.png" />
+    <None Include="Resources\camara-de-fotos.png" />
+    <None Include="Resources\camara-de-fotos %281%29.png" />
+    <None Include="Resources\camara-web.png" />
+    <None Include="Resources\camara-web %281%29.png" />
+    <None Include="Resources\disquete.png" />
+    <None Include="Resources\portatil-abierto.png" />
+    <None Include="Resources\video-chat.png" />
+    <None Include="Resources\videollamada %281%29.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Accept.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Add.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\AddGroup.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\ApplicationXpTerminal.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\ArrowRefresh.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Borrar.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Cancel.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Cancel2.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Cancel3.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Delete.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Delete2.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Delete3.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\DocumentIndex.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\DocumentMark.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\DocumentMove.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\DoorIn.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\EditGroup.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\EditReport.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\FileExtensionPDF.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\FileExtensionXLS.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\FilterDelete.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Guardar.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\LicenseManagement.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\LockOpen.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\MailingList.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\PageCopy.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\PageDelete.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\PageEdit.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Pause.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Play.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\ReportGo.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Reports.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Search.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\SettingTools.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\Start.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\TableTabSearch.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\VentanasCascada.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\VentanasHorizontal.png" />
+    <Content Include="_RECURSOS\images\Botones\32x32\VentanasVertical.png" />
+    <Content Include="_RECURSOS\images\Gifs\BarraAzul.gif" />
+    <Content Include="_RECURSOS\images\Gifs\BarraVerde.gif" />
+    <Content Include="_RECURSOS\images\Gifs\Buscando.gif" />
+    <Content Include="_RECURSOS\images\Gifs\Circular.gif" />
+    <Content Include="_RECURSOS\images\Gifs\Engrane.gif" />
+    <Content Include="_RECURSOS\images\Gifs\Engranes.gif" />
+    <Content Include="_RECURSOS\images\Inicio\AccessSecurity.png" />
+    <Content Include="_RECURSOS\images\Inicio\AddUser.png" />
+    <Content Include="_RECURSOS\images\Inicio\Becas.ico" />
+    <Content Include="_RECURSOS\images\Inicio\Catalogos.png" />
+    <Content Include="_RECURSOS\images\Inicio\Config.png" />
+    <Content Include="_RECURSOS\images\Inicio\Maps.png" />
+    <Content Include="_RECURSOS\images\Inicio\Seguridad.png" />
+    <Content Include="_RECURSOS\images\Inicio\SystemMonitor.png" />
+    <Content Include="_RECURSOS\images\Inicio\UserInfo.png" />
+    <Content Include="_RECURSOS\images\Inicio\validated.png" />
+    <Content Include="_RECURSOS\images\Logos\Logo CAT_133x167.png" />
+    <Content Include="_RECURSOS\images\Logos\Logo CAT_228x273.png" />
+    <None Include="_RECURSOS\images\Inicio\School.png" />
+    <None Include="_RECURSOS\images\Botones\32x32\SearchAccounts.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>
